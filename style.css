@@ -5,6 +5,7 @@ body {
   transition: 0.3s;
 }
 
+/* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
@@ -18,18 +19,26 @@ nav {
 
 nav ul {
   list-style: none;
-  display: flex;
-  gap: 20px;
+  display: flex;          /* 🔥 makes items horizontal */
+  gap: 25px;              /* space between links */
+  margin: 0;
+  padding: 0;
+}
+nav ul {
+  justify-content: center;
+}
+
+nav li {
+  display: inline;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #00adb5;
+  color: #033537;
 }
 
 nav button {
@@ -40,9 +49,10 @@ nav button {
   cursor: pointer;
 }
 
+/* HEADER */
 header {
   text-align: center;
-  padding: 40px;
+  padding: 70px;
   background: linear-gradient(to right, #333, #555);
   color: white;
 }
@@ -51,24 +61,47 @@ header {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 3px solid white;
-  margin-bottom: 10px;
+  border: 3px solid #051c3f;
+  object-fit: cover;
 }
 
+/* SECTIONS */
 section {
   padding: 20px;
   margin: 20px;
   background: white;
   border-radius: 10px;
-  animation: fadeIn 1s ease-in;
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* HEADINGS */
+h1 {
+  font-size: 40px;
+  color: #00adb5;
+}
+
+h2 {
+  font-size: 28px;
+  color: rgb(0, 0, 0);
+}
+
+/* TEXT */
+p {
+  color: #000000;
+}
+
+/* PROJECTS */
 .project {
   padding: 15px;
   margin-top: 15px;
   border-radius: 10px;
-  background: #fafafa;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fdfafa;
+  transition: 0.3s;
+}
+
+.project h3 {
+  color: #222;
 }
 
 .project:hover {
@@ -76,21 +109,25 @@ section {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-h2 {
-  color: #222;
+/* BUTTONS */
+.btn {
+  padding: 15px 35px;
+  font-size: 16px;
+  margin: 15px 10px;
+  background: linear-gradient(45deg, #2563eb, #38bdf8);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.btn:hover {
+  transform: scale(1.1);
 }
 
+/* DARK MODE */
 .dark {
   background: #121212;
   color: white;
@@ -100,6 +137,22 @@ h2 {
   background: #1e1e1e;
 }
 
+.dark p {
+  color: #ccc;
+}
+
+.dark h2 {
+  color: white;
+}
+
 .dark nav {
   background: #000;
+}
+
+.dark .project {
+  background: #2a2a2a;
+}
+
+.dark .project h3 {
+  color: #00adb5;
 }
